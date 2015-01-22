@@ -8,7 +8,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-browserify');
-  grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
     project: {
@@ -68,22 +67,11 @@ module.exports = function(grunt) {
         src: ['index.html', 'js/templates/**/*.html', 'css/**/*.css', 'img/**/*.*', 'fonts/**/*.*'],
         dest: 'build/'
       }
-    },
-
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js'
-      },
-      continuous: {
-        configFile: 'karma.conf.js',
-        singleRun: true,
-        browsers: ['PhantomJS']
-      }
     }
-  });
+  };
 
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha', 'browserify:test', 'karma:unit']);
-  grunt.registerTask('test:client', ['jshint', 'jscs', 'browserify:test', 'karma:unit']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha', 'browserify:test']);
+  grunt.registerTask('test:client', ['jshint', 'jscs', 'browserify:test']);
   grunt.registerTask('build', ['clean', 'browserify:dev', 'browserify:test', 'copy:dev']);
   grunt.registerTask('build:basic', ['clean', 'browserify:dev', 'copy:dev']);
 };
