@@ -1,0 +1,65 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+ul.nav.navbar-nav {
+  width: 100%;
+  font-family: serif;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-size: 20px;
+  padding-left: 0px;
+}
+
+ul.nav.navbar-nav li.navvy {
+  top: 20px;
+}
+
+ul.nav.navbar-nav li.space {
+  top: 20px;
+  margin-right: 5%;
+  color: Transparent;
+  font-style: normal;
+}
+
+ul.nav.navbar-nav li.smallspace {
+  top: 20px;
+  margin-right: 3%;
+  color: Transparent;
+  font-style: normal;
+}
+
+.nav > li > a.nopad {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  top: 5px;
+}
+
+.nav > li > a.smallpad {
+  padding: 5px 5px 5px 5px;
+  top: 30px;
+}
+
+div#navbar.navbar-collapse.collapse.in ul.nav.nav-bar li.social {
+  display: none;
+  visibility: hidden;
+}
+div#navbar.navbar-collapse.collapse.in ul.nav.nav-bar li.hideme {
+  display: none;
+  visibility: hidden;
+}
+
+/* Social Media Buttons */
+.nav.nav-bar li.social {
+  display: inline-block;
+  top: 10px;
+  padding: 5px 5px;
+  font-size: 20px;
+  position: relative;
+}
